@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+*{
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+.centerInfo{
+  width: 100%;
+  display: flex;
+  padding: 20px 20px 50px;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-image: url('../Images/PlanoDeFundo.png');
+}
+
+.headerInfo{
+  width: 100%;
+  margin: 0 0 20px;
+  display: flex;
+  padding: 20px;
+  font-size: 1.4em;
+  max-width: 700px;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: space-around;
+  background-color: rgba(125, 125, 125, 0.8);
+}
+
+.gridCards{
+  gap: 15px ;
+  width: 100%;
+  margin:  auto;
+  display: grid;
+  max-width: 800px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.cards{
+  aspect-ratio: 3/4;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  transition: all 450ms ease;
+  border-radius: 14px;
+  transform-style: preserve-3d;
+  background-color: #A9A9A9;
+}
+
+.card{
+  width: 100%;
+  border: 2px solid #A9A9A9;
+  height: 100%;
+  position: absolute;
+  transition: all 500ms ease;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+}
+
+.cardReveal{
+  transform: rotateY(180deg);
+}
+
+.cardDisable{
+  filter: saturate(0);
+  opacity: 0.8;
+}
+
+.Front{
+  transform: rotateY(180deg);
+}
+
+.Back{
+  backface-visibility: hidden;
+  background-image: url('../Images/FundoDaCarta.png');
+}
+
+.gridButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonRestart{
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.gridButton{
+  display: flex;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.buttonRestart{
+  color: black;
+  border-radius: 12px;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+}
